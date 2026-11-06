@@ -1,0 +1,17 @@
+**/target/
+**/node_modules/
+**/dist/
+.runtime/
+.env
+*.log
+*.mv.db
+*.trace.db
+*.pid
+**/test-results/
+**/playwright-report/
+**/src/main/resources/static/
+delivery/
+/data/
+/backend/data/
+.env.*
+!.env.example

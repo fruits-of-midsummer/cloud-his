@@ -1,0 +1,34 @@
+server:
+  port: ${PORT:8080}
+  address: ${BIND_ADDRESS:127.0.0.1}
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        http-only: true
+        same-site: strict
+        secure: ${COOKIE_SECURE:false}
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/his;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password: ${DB_PASSWORD:}
+  sql:
+    init:
+      mode: never
+      encoding: UTF-8
+  jackson:
+    time-zone: Asia/Shanghai
+    property-naming-strategy: SNAKE_CASE
+  web:
+    resources:
+      static-locations: classpath:/static/
+  mvc:
+    log-resolved-exception: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+his:
+  seed: ${HIS_SEED:true}
+  initial-password: ${HIS_INITIAL_PASSWORD:His@2026!!}
+  production: false

@@ -1,0 +1,13 @@
+云医院 HIS 1.0 运行包
+
+1. 安装 Java 17 或更新版本，将 ZIP 完整解压到可写目录。
+2. 双击“启动.cmd”（或 run.cmd），等待浏览器打开 http://127.0.0.1:8080。
+3. 登录账号：admin；开发初始密码：His@2026!!。
+4. 使用完双击“停止.cmd”。数据保存在本目录 data/，不要删除。
+
+PowerShell 启动命令：
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Start.ps1
+
+也可直接前台运行：java -jar .\cloud-his-1.0.0.jar，按 Ctrl+C 停止。
+本包已构建完成，无需执行 Build.ps1，也不需要 Node.js 或 Maven。
+更多说明请阅读本目录 README.md。日志在 .runtime/。

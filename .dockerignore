@@ -1,0 +1,8 @@
+**/node_modules
+**/target
+**/dist
+**/test-results
+.runtime
+.git
+.env
+delivery
